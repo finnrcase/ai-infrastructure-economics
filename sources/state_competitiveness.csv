@@ -1,0 +1,17 @@
+State,Electricity_Price_cents_per_kWh,Grid_Capacity_MW,Renewable_Share_Percent,Carbon_Intensity_kgCO2_per_kWh,Power_Reliability_Score,Transmission_Congestion_Score,Land_Availability_Score,Water_Stress_Score,Existing_Data_Center_Ecosystem_Score,Interconnection_Queue_Time_Years,Available_Transmission_Capacity_MW,Substation_Availability_Score,Load_Growth_Pressure_Percent,Power_Delivery_Risk_Score,Natural_Gas_Price_USD_per_MMBtu,Solar_Resource_Score,Geothermal_Potential_Score,Nuclear_Capacity_MW,Behind_The_Meter_Potential_Score,Regional_Competitiveness_Score
+
+Texas,9.79,168317,14.7
+Virginia,10.62,29147,6.5
+Arizona,12.74,32877,7.1
+California,27.04,96773,34.0
+Nevada,,,,,,,,,,,,,,,,,,,,
+Georgia,,,,,,,,,,,,,,,,,,,,
+Ohio,,,,,,,,,,,,,,,,,,,,
+Oregon,,,,,,,,,,,,,,,,,,,,
+Washington,,,,,,,,,,,,,,,,,,,,
+North Carolina,,,,,,,,,,,,,,,,,,,,
+Utah,,,,,,,,,,,,,,,,,,,,
+Tennessee,,,,,,,,,,,,,,,,,,,,
+Indiana,,,,,,,,,,,,,,,,,,,,
+Pennsylvania,,,,,,,,,,,,,,,,,,,,
+Illinois,,,,,,,,,,,,,,,,,,,,
