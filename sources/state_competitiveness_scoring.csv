@@ -18,3 +18,52 @@ Solar_Resource,0.03
 Geothermal_Potential,0.02
 Nuclear_Capacity,0.03
 Behind_The_Meter_Potential,0.12
+
+Version 1:
+Electricity Price
+Installed Generation Capacity
+Renewable Share
+Data Center Count
+Natural Gas Share (BTM proxy)
+
+Version 2:
+Carbon Intensity
+Interconnection Queue Time
+Transmission Capacity
+Natural Gas Price
+Nuclear Capacity
+Solar Resource
+
+Version 3:
+Power Reliability
+Substation Availability
+Load Growth Pressure
+Power Delivery Risk
+
+
+
+Reasoning:
+
+Grid Capacity (18%)
+Regions need enough available power to support large AI loads, so capacity is weighted highest.
+
+Electricity Price (15%)
+Electricity is a major operating cost, making lower-cost regions more attractive.
+
+Behind-the-Meter Potential (12%)
+Regions with strong dedicated power options may become more competitive as grid access gets harder.
+
+Existing Data Center Ecosystem (10%)
+Current data center hubs already have fiber, labor, suppliers, and permitting experience.
+
+Power Reliability (10%)
+AI infrastructure needs consistent uptime, so unreliable power adds operational risk.
+
+Transmission Congestion (10%)
+Congestion can delay projects or prevent new load from reaching available generation.
+
+Interconnection Queue Time (8%)
+Shorter connection timelines make a region more attractive for fast deployment.
+
+Remaining Variables
+The remaining variables matter, but are given lower weights because they are either secondary, harder to measure, or partly captured by the larger categories.

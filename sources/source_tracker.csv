@@ -1,0 +1,17 @@
+Source,Type,Variables Used,Notes
+International Energy Agency (IEA) - Energy and AI,Report,AI Adoption Growth;Inference Growth;Training Growth,Primary source for AI demand and electricity demand forecasts
+Lawrence Berkeley National Laboratory - 2024 Data Center Energy Usage Report,Research Report,Electricity Demand;Data Center Growth,Primary U.S. baseline for data center electricity demand
+Electric Power Research Institute (EPRI) - Powering Intelligence,Industry Report,Electricity Demand Forecasts;Grid Impacts,Scenario estimates for future electricity demand
+U.S. Energy Information Administration (EIA) - U.S. States,Government Database,Electricity Price;Generation Capacity;Renewable Share;Natural Gas Share;Generation Mix,Primary state-level energy dataset
+U.S. Energy Information Administration (EIA) - Electricity Data Browser,Government Database,Electricity Price;Generation;Consumption,State electricity statistics
+U.S. Energy Information Administration (EIA) - Electric Power Monthly,Government Report,Electricity Trends;Generation Trends,Historical electricity statistics
+U.S. Department of Energy (DOE) - Clean Energy Resources to Meet Data Center Electricity Demand,Government Report,Grid Capacity;Transmission;Policy Context,Infrastructure and grid planning context
+NVIDIA - H100 Tensor Core GPU,Technical Documentation,Power Draw per GPU;Hardware Characteristics,AI accelerator specifications
+NVIDIA - Blackwell Architecture,Technical Documentation,Efficiency Improvement;Future Hardware Performance,Hardware efficiency assumptions
+Uptime Institute - Power Usage Effectiveness (PUE),Industry Resource,PUE,Data center efficiency benchmark
+Google - Data Center Sustainability,Corporate Sustainability Report,Renewable Energy;Data Center Operations,Corporate sustainability reference
+Microsoft - Sustainability,Corporate Sustainability Report,Renewable Energy;Infrastructure Strategy,Corporate sustainability reference
+Amazon Web Services (AWS) - Sustainability,Corporate Sustainability Report,Cloud Infrastructure;Energy Strategy,Corporate sustainability reference
+Meta - Data Center Sustainability,Corporate Sustainability Report,Data Center Operations;Energy Strategy,Corporate sustainability reference
+Data Center Map - United States Data Centers,Industry Database,Existing Data Center Count,Used to construct infrastructure ecosystem variable
+Rand et al. (2025) - Queued Up: Characteristics of Power Plants Seeking Transmission Interconnection,Research Report,Interconnection Score;Transmission Constraints;Queue Durations,Used for regional interconnection competitiveness proxy
