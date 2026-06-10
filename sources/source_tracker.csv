@@ -17,3 +17,4 @@ Data Center Map - United States Data Centers,Industry Database,Existing Data Cen
 Rand et al. (2025) - Queued Up: Characteristics of Power Plants Seeking Transmission Interconnection,Research Report,Interconnection Score;Transmission Constraints;Queue Durations,Used for regional interconnection competitiveness proxy
 "U.S. Energy Information Administration, State Electricity Profiles",Government Database,btm_inputs.csv;industrial_electricity_price_cents_per_kwh,"Average retail electricity price by state, cents/kWh."
 U.S. Energy Information Administration - Natural Gas State Data,Government Database,btm_inputs.csv;natural_gas_price_usd_per_mcf,"State natural gas price, using 2024 where 2025 is unavailable or incomplete."
+NREL PVWatts,Government Model,btm_inputs.csv;solar_capacity_factor,Method: Annual AC Energy / (System Size × 8760)

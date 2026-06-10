@@ -30,7 +30,7 @@ btm_power_cost,Behind-the-Meter Variables,Independent,Cost of behind-the-meter g
 btm_score,Behind-the-Meter Variables,Derived,Proxy score for behind-the-meter potential based on natural gas generation share,Index,Positive,Derived
 industrial_electricity_price_cents_per_kwh,Behind-the-Meter Variables,Independent,Average retail electricity price used as the grid power cost baseline.,Cents per kWh,Negative,EIA
 natural_gas_price_usd_per_mcf,Behind-the-Meter Variables,Independent,Natural gas price used for behind-the-meter gas generation fuel cost. Units are dollars per thousand cubic feet; treated as approximately comparable to dollars per MMBtu for simplified first-pass modeling.,Dollars per Mcf,Negative,EIA
-solar_capacity_factor,Behind-the-Meter Variables,Independent,Representative utility-scale solar capacity factor by state. Currently blank pending NREL solar data collection.,Capacity factor,Positive,NREL
+solar_capacity_factor,Behind-the-Meter Variables,Independent,Estimated utility-scale solar capacity factor (%). Derived from NREL PVWatts annual AC generation estimates.,Percent,Positive,NREL PVWatts
 
 infrastructure_cost,Intermediate Variables,Intermediate,Projected infrastructure operating cost,Dollars,Negative,Model
 infrastructure_risk_score,Intermediate Variables,Intermediate,Risk from power and infrastructure constraints,Score,Negative,Model
