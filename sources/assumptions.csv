@@ -1,0 +1,2 @@
+Variable,Assumption,Reasoning,Sources
+Interconnection_Friction_Score,Author-constructed regional score from 0 to 1; higher means lower relative interconnection friction and easier relative development environment.,"Exact state-level queue times are not consistently available across all states. The score proxies regional development friction using ISO/RTO structure, interconnection queue literature, and reported queue congestion.",Rand et al. 2025; Lawrence Berkeley National Laboratory; PJM Interconnection; CAISO; MISO; ERCOT

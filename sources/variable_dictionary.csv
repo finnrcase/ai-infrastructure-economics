@@ -40,3 +40,5 @@ regional_competitiveness_score,Outcome Variables,Dependent,Overall attractivenes
 projected_ai_investment_share,Outcome Variables,Dependent,Expected share of future AI infrastructure investment,Percent,Output,Model
 projected_capacity_growth,Outcome Variables,Dependent,Expected AI infrastructure growth by region,MW,Output,Model
 top_regions_rank,Outcome Variables,Dependent,Ranking of states for AI infrastructure deployment,Rank,Output,Model
+Interconnection_Region,Regional Competitiveness Variables,Independent,Regional transmission/interconnection market assignment used for the interconnection friction proxy.,Region,Context,Author-constructed
+Interconnection_Friction_Score,Regional Competitiveness Variables,Independent,Author-constructed 0-1 index where higher values indicate lower relative interconnection friction.,Index,Positive,Author-constructed

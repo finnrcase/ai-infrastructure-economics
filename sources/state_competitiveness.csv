@@ -1,16 +1,16 @@
-State,Electricity_Price_cents_per_kWh,Grid_Capacity_MW,Renewable_Share_Percent,Carbon_Intensity_kgCO2_per_kWh,Power_Reliability_Score,Transmission_Congestion_Score,Land_Availability_Score,Water_Stress_Score,Existing_Data_Center_Ecosystem_Score,Interconnection_Queue_Time_Years,Available_Transmission_Capacity_MW,Substation_Availability_Score,Load_Growth_Pressure_Percent,Power_Delivery_Risk_Score,Natural_Gas_Price_USD_per_MMBtu,Solar_Resource_Score,Geothermal_Potential_Score,Nuclear_Capacity_MW,Behind_The_Meter_Potential_Score,Regional_Competitiveness_Score
-Texas,9.79,168317,14.7,,,,,,,,,,,,,,,,,
-Virginia,10.62,29147,6.5,,,,,,,,,,,,,,,,,
-Arizona,12.74,32877,7.1,,,,,,,,,,,,,,,,,
-California,27.04,96773,34.0,,,,,,,,,,,,,,,,,
-Nevada,11.47,16725,22.3,,,,,,,,,,,,,,,,,
-Georgia,11.40,39746,5.8,,,,,,,,,,,,,,,,,
-Ohio,11.29,30491,2.3,,,,,,,,,,,,,,,,,
-Oregon,11.11,17692,42.8,,,,,,,,,,,,,,,,,
-Washington,10.13,30975,47.3,,,,,,,,,,,,,,,,,
-North Carolina,11.65,36337,5.8,,,,,,,,,,,,,,,,,
-Utah,9.97,10277,8.8,,,,,,,,,,,,,,,,,
-Tennessee,10.90,20605,5.2,,,,,,,,,,,,,,,,,
-Indiana,11.38,27837,6.0,,,,,,,,,,,,,,,,,
-Pennsylvania,12.51,48856,2.0,,,,,,,,,,,,,,,,,
-Illinois,12.21,46279,6.1,,,,,,,,,,,,,,,,,
+State,Electricity_Price_cents_per_kWh,Grid_Capacity_MW,Renewable_Share_Percent,Carbon_Intensity_kgCO2_per_kWh,Power_Reliability_Score,Transmission_Congestion_Score,Land_Availability_Score,Water_Stress_Score,Existing_Data_Center_Ecosystem_Score,Interconnection_Queue_Time_Years,Available_Transmission_Capacity_MW,Substation_Availability_Score,Load_Growth_Pressure_Percent,Power_Delivery_Risk_Score,Natural_Gas_Price_USD_per_MMBtu,Solar_Resource_Score,Geothermal_Potential_Score,Nuclear_Capacity_MW,Behind_The_Meter_Potential_Score,Regional_Competitiveness_Score,Interconnection_Region,Interconnection_Friction_Score
+Texas,9.79,168317,14.7,,,,,,,,,,,,,,,,,,ERCOT,1.00
+Virginia,10.62,29147,6.5,,,,,,,,,,,,,,,,,,PJM,0.55
+Arizona,12.74,32877,7.1,,,,,,,,,,,,,,,,,,Western Interconnection,0.75
+California,27.04,96773,34.0,,,,,,,,,,,,,,,,,,CAISO,0.20
+Nevada,11.47,16725,22.3,,,,,,,,,,,,,,,,,,Western Interconnection,0.75
+Georgia,11.40,39746,5.8,,,,,,,,,,,,,,,,,,Southeast,0.50
+Ohio,11.29,30491,2.3,,,,,,,,,,,,,,,,,,PJM/MISO,0.60
+Oregon,11.11,17692,42.8,,,,,,,,,,,,,,,,,,Western Interconnection,0.75
+Washington,10.13,30975,47.3,,,,,,,,,,,,,,,,,,Western Interconnection,0.75
+North Carolina,11.65,36337,5.8,,,,,,,,,,,,,,,,,,Southeast,0.50
+Utah,9.97,10277,8.8,,,,,,,,,,,,,,,,,,Western Interconnection,0.75
+Tennessee,10.90,20605,5.2,,,,,,,,,,,,,,,,,,TVA,0.50
+Indiana,11.38,27837,6.0,,,,,,,,,,,,,,,,,,MISO,0.65
+Pennsylvania,12.51,48856,2.0,,,,,,,,,,,,,,,,,,PJM,0.55
+Illinois,12.21,46279,6.1,,,,,,,,,,,,,,,,,,MISO,0.65
