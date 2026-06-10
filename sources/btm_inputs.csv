@@ -1,0 +1,7 @@
+State,industrial_electricity_price_cents_per_kwh,natural_gas_price_usd_per_mcf,solar_capacity_factor,notes
+Texas,9.79,2.52,,"Electricity price from EIA State Electricity Profiles. Natural gas price uses 2024 value because 2025 may be unavailable/incomplete."
+Virginia,10.62,4.35,,"Electricity price from EIA State Electricity Profiles. Natural gas price uses 2024 value because 2025 may be unavailable/incomplete."
+Arizona,12.74,5.33,,"Electricity price from EIA State Electricity Profiles. Natural gas price uses 2024 value because 2025 may be unavailable/incomplete."
+California,27.04,11.48,,"Electricity price from EIA State Electricity Profiles. Natural gas price uses 2024 value because 2025 may be unavailable/incomplete."
+Nevada,11.47,10.69,,"Electricity price from EIA State Electricity Profiles. Natural gas price uses 2024 value because 2025 may be unavailable/incomplete."
+Washington,10.13,12.13,,"Electricity price from EIA State Electricity Profiles. Natural gas price uses 2024 value because 2025 may be unavailable/incomplete."
