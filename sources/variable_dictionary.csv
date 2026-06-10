@@ -22,8 +22,6 @@ carbon_intensity,Electricity Market Variables,Independent,CO2 emissions per unit
 
 data_center_count,Infrastructure Variables,Independent,Number of existing data centers in a state,Count,Positive,Data Center Map
 ecosystem_score,Infrastructure Variables,Derived,Normalized score based on existing data center count,Index,Positive,Derived
-interconnection_region,Infrastructure Variables,Categorical,Regional interconnection market classification,Category,Varies,LBNL Queued Up
-interconnection_score,Infrastructure Variables,Derived,Proxy score for interconnection processing speed,Index,Positive,LBNL Queued Up
 
 solar_resource,Behind-the-Meter Variables,Independent,Solar generation potential,Index,Positive,NREL
 geothermal_potential,Behind-the-Meter Variables,Independent,Regional geothermal potential,Index,Positive,DOE
