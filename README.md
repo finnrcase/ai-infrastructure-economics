@@ -1,236 +1,245 @@
-# Power, Compute, and Geography:
-## A Quantitative Framework for AI Infrastructure Competitiveness
+# Final Results and Executive Summary
+
+## Executive Summary
+
+This project developed a quantitative framework for evaluating AI infrastructure competitiveness across the United States. The analysis combines regional competitiveness modeling, Monte Carlo simulation, behind-the-meter power economics, national power outlook scenarios, and community impact analysis.
+
+The objective was not to predict the exact location of future AI infrastructure deployment but to identify the factors most likely to influence where AI infrastructure can be built, how it can be powered, and how communities may be affected by its expansion.
 
 ---
 
-# Abstract
+# Key Finding 1: Power Economics Are Becoming a Primary Constraint
 
-In prog
+Historically, data center deployment decisions were influenced by land availability, tax incentives, and network connectivity.
 
----
+The results of this framework suggest that electricity availability and power economics are becoming increasingly important determinants of AI infrastructure competitiveness.
 
-# Research Question
-
-How do electricity markets, infrastructure characteristics, and power constraints influence AI infrastructure competitiveness?
+As AI workloads grow, access to reliable, scalable, and affordable electricity may become one of the primary constraints on future infrastructure expansion.
 
 ---
 
-# Methodology
+# Key Finding 2: Texas Emerges as the Strongest Overall State
 
-This study uses a quantitative framework to evaluate the competitiveness of U.S. states as locations for AI infrastructure. Rather than attempting to predict specific locations for future data centers, the goal of the research is to compare states using a consistent set of energy, infrastructure, and ecosystem characteristics that are most likely to have a large influence on AI infrastructure investment decisions.
+Across the regional competitiveness framework and Monte Carlo simulations, Texas consistently emerged as the strongest overall deployment location.
 
-The analysis has three main components:
+Several factors contributed to this result:
 
-- Regional Competitiveness Framework
-- Monte Carlo Robustness Analysis
-- Behind-the-Meter Infrastructure Economics
+- Low electricity prices
+- Large generation capacity
+- Existing infrastructure ecosystem
+- Favorable interconnection conditions
+- Strong behind-the-meter potential
 
----
-
-## State Sample Selection
-
-The model uses 15 states that are currently most considered for potential AI infrastructure growth markets.
-
-- Texas
-- Virginia
-- Arizona
-- California
-- Nevada
-- Georgia
-- Ohio
-- Oregon
-- Washington
-- North Carolina
-- Utah
-- Tennessee
-- Indiana
-- Pennsylvania
-- Illinois
+Texas also demonstrated the highest robustness across randomized weighting scenarios.
 
 ---
 
-## Variables
+# Key Finding 3: Interconnection Constraints Matter
 
-Version 1 uses six variables:
+The addition of an interconnection friction score significantly improved the realism of the framework.
 
-### Electricity Price
-Industrial electricity prices collected from the U.S. Energy Information Administration (EIA).
+Infrastructure competitiveness is not determined solely by power availability. The ability to access transmission infrastructure and navigate interconnection queues may become increasingly important as AI electricity demand grows.
 
-### Grid Capacity
-Installed generation capacity collected from the EIA.
-
-### Renewable Energy Share
-Percentage of electricity generated from renewable sources collected from the EIA.
-
-### Ecosystem Score
-Current data center counts obtained from DataCenterMap.
-
-### Behind-the-Meter Score
-A proxy measure of behind-the-meter deployment potential derived from state-level natural gas generation characteristics. This variable is used in the competitiveness framework to estimate the relative attractiveness of states for behind-the-meter development. It is distinct from the separate Behind-the-Meter Economics Framework, which directly models the cost of grid, natural gas, solar, and hybrid power architectures.
-
-### Interconnection Friction Score
-Because state-level queue duration data was not consistently available, a regional proxy approach was used. States were assigned scores based on the relative difficulty of transmission interconnection within their primary interconnection region.
+The results suggest that transmission bottlenecks may influence deployment decisions nearly as much as electricity prices.
 
 ---
 
-# Regional Competitiveness Framework
+# Key Finding 4: Optimal Power Architecture Depends on Geography
 
-The normalized variables were combined into a weighted competitiveness score representing the relative attractiveness of each state for future AI infrastructure deployment.
+No single power architecture dominates every region.
 
-Weighting was based on sourced information about industry.
+The behind-the-meter economics framework suggests that:
+
+- Natural gas generation remains attractive in states with low fuel costs.
+- Solar generation becomes increasingly attractive in regions with strong solar resources.
+- Hybrid systems combining solar, storage, and backup generation may provide the most balanced long-term solution. This is important as it is the most reliable system, something the model struggles to factor in and would be added in stage 2.
+
+This suggests that future AI infrastructure deployment strategies may become increasingly location-specific.
 
 ---
 
-# Monte Carlo Robustness Analysis
+# Key Finding 5: National Power Demand Is Growing Faster Than Many Existing Planning Assumptions
 
-Because of the use of subjective weighting assumptions, a Monte Carlo simulation framework was added.
+The national power outlook framework suggests that AI-driven electricity demand growth could place increasing pressure on the U.S. power system by 2030.
 
-### 10,000 Simulations
+Although substantial generation additions are planned, future outcomes depend heavily on project completion rates and demand growth assumptions.
 
-For each simulation:
+The results reinforce the importance of generation expansion, transmission investment, and alternative power strategies.
 
-1. Variable weights were randomly generated using a Dirichlet distribution.
-2. Competitiveness scores were recalculated.
-3. States were ranked according to their simulated score.
+---
 
-The Monte Carlo framework was used to estimate:
+# Key Finding 6: Community Opposition May Be a Distribution Problem
+
+The community impact framework produced one of the most interesting findings of the project.
+
+Large AI infrastructure projects may create meaningful local costs through:
+
+- Electricity price increases
+- Construction disruption
+- Traffic
+- Noise
+- Land use impacts
+
+However, these projects also generate substantial tax revenue and economic activity.
+
+Under baseline assumptions, modeled local tax revenues exceeded the estimated cost of offsetting residential electricity bill impacts. This suggests that targeted mitigation programs may allow communities to share more directly in the economic benefits of infrastructure development.
+
+The difference between electricity prices and tax revenue could subsidize costs for residents while mitigating negative externalities.
+
+---
+
+# Limitations
+
+Several limitations remain.
+
+The framework uses simplified assumptions and proxies for a number of variables, including:
+
+- Interconnection friction
+- Community burden estimates
+- Behind-the-meter deployment potential
+- Reliability in power sourcing
+
+The analysis should therefore be interpreted as a comparative decision-support framework rather than a predictive forecasting model.
+
+Future versions may incorporate:
+
+- State-level queue duration data
+- Dispatch optimization
+- Reliability metrics
+- Water constraints
+- Nuclear and geothermal scenarios
+- Capacity expansion modeling
+- Source location diversification
+
+---
+
+# Conclusion
+
+The results suggest that future AI infrastructure deployment will be shaped increasingly by power economics, grid constraints, and energy availability.
+
+While Texas currently appears to possess the strongest overall combination of infrastructure advantages, the optimal deployment strategy varies substantially across regions and power market conditions.
+
+The broader implication is that AI infrastructure development is no longer solely a computing problem. It is increasingly an energy, infrastructure, and community planning problem.
+
+Organizations that can successfully align power strategy, infrastructure economics, and community outcomes may be best positioned to support the next generation of AI growth.
+
+# Repository Structure
+
+The project is organized into nine notebooks that progressively build the research framework.
+
+| Notebook | Purpose |
+|-----------|----------|
+| 01_data_collection | Data sources, documentation, and variable construction |
+| 02_baseline_model | Model development notes, assumptions, and framework design |
+| 03_regional_competitiveness | State-level AI infrastructure competitiveness model |
+| 04_monte_carlo | Robustness testing using 10,000 Monte Carlo simulations |
+| 05_behind_the_meter | Grid, natural gas, solar, and hybrid power economics |
+| 06_visualizations | Final publication-quality figures and charts |
+| 07_national_power_outlook_2030 | National electricity demand and capacity outlook scenarios |
+| 08_community_impact_and_mitigation | Local economic impacts, electricity costs, and mitigation analysis |
+| 09_final_results | Executive summary, findings, conclusions, and future research |
+
+---
+
+# Methodology Overview
+
+The project combines five complementary analytical frameworks.
+
+### 1. Regional Competitiveness Framework
+
+Evaluates state-level attractiveness for AI infrastructure deployment using:
+
+- Electricity Price
+- Grid Capacity
+- Renewable Energy Share
+- Existing Data Center Ecosystem
+- Behind-the-Meter Potential
+- Interconnection Friction
+
+### 2. Monte Carlo Robustness Analysis
+
+10,000 simulations were performed using randomized weighting assumptions generated through a Dirichlet distribution.
+
+Outputs include:
 
 - Winner Frequency
 - Top-Three Frequency
 - Median Competitiveness
 - Competitiveness Volatility
 
----
+### 3. Behind-the-Meter Infrastructure Economics
 
-# Behind-the-Meter Infrastructure Economics
+Compares:
 
-Six of the high-performing states were used:
+- Grid Power
+- Natural Gas Generation
+- Solar Generation
+- Hybrid Solar + Storage + Gas Systems
 
-- Texas
-- Virginia
-- Arizona
-- California
-- Nevada
-- Washington
+to determine the lowest-cost power architecture under different regional conditions.
 
-The framework evaluates:
+### 4. National Power Outlook Through 2030
 
-## Grid Power
+Evaluates whether planned U.S. generation additions appear sufficient to support projected AI-driven electricity demand growth under low, baseline, and high growth scenarios.
 
-Electricity purchased entirely from the grid using state-level industrial electricity prices.
+### 5. Community Impact and Mitigation Economics
 
-## Natural Gas Generation
+Evaluates:
 
-Behind-the-meter generation using state-level natural gas prices and simplified generation cost assumptions.
+- Job Creation
+- Local Tax Revenue
+- Resident Electricity Cost Impacts
+- Community Mitigation Strategies
 
-## Solar Generation
-
-Utility-scale solar generation using capacity factors estimated from NREL PVWatts simulations.
-
-## Hybrid Systems
-
-A simplified hybrid architecture combining solar generation, battery storage, and natural gas backup generation. This is the most realistic model since it incorporates a factor not explicitly captured by the competitiveness framework: reliability.
-
-The objective is to identify which power architecture minimizes electricity costs under different regional conditions.
+to estimate whether AI infrastructure projects can offset local burdens while maintaining positive economic benefits.
 
 ---
 
-# Main Findings
+# Key Visualizations
 
-In Progress
+The most important outputs include:
 
----
+- State Competitiveness Rankings
+- Monte Carlo Winner Frequency
+- Strength vs Robustness Analysis
+- Power Architecture Comparison
+- Break-Even Power Cost Curves
+- National Power Outlook Scenarios
+- Community Benefits vs Mitigation Costs
 
-# Research Question
+Figures are located in:
 
-How do electricity markets, infrastructure characteristics, and power constraints influence AI infrastructure competitiveness across the United States?
-
----
-
-# Contributions
-
-Most research on the expansion of AI electricity demand evaluates environmental impacts, policy tradeoffs, or AI model growth. This paper focuses on AI infrastructure economics through a bottom-up framework designed to evaluate regional competitiveness and emerging infrastructure strategies used to attract investment in AI expansion.
-
-The framework models how electricity pricing, grid capacity, infrastructure constraints, interconnection conditions, and energy generation availability influence where AI infrastructure is likely to be constructed. Using scenario analysis and Monte Carlo simulations, the paper quantifies uncertainty while identifying the factors that drive future competitiveness.
-
-Beyond evaluating infrastructure competitiveness, the framework also examines the emergence of behind-the-meter power solutions, including natural gas, solar, and hybrid power systems as potential responses to growing power constraints associated with AI expansion.
+text outputs/figures/ 
 
 ---
 
-# Sources by Research Component
+# Data Sources
 
-## 1. Regional Competitiveness Framework
+Primary data sources include:
 
-### Electricity Markets and Power System Data
+- U.S. Energy Information Administration (EIA)
+- Lawrence Berkeley National Laboratory (LBNL)
+- International Energy Agency (IEA)
+- Electric Power Research Institute (EPRI)
+- National Renewable Energy Laboratory (NREL)
+- DataCenterMap
+- PJM
+- MISO
+- CAISO
+- ERCOT
 
-United States Energy Information Administration. “U.S. States.” U.S. Energy Information Administration, https://www.eia.gov/state/.
-
-United States Energy Information Administration. “Electricity Data Browser.” U.S. Energy Information Administration, https://www.eia.gov/electricity/data.php.
-
-United States Energy Information Administration. Electric Power Monthly. U.S. Energy Information Administration, https://www.eia.gov/electricity/monthly/.
-
-### Infrastructure Ecosystem Data
-
-Data Center Map. “Data Center Locations in the United States.” Data Center Map, https://www.datacentermap.com/usa/.
-
-### Interconnection Friction and Queue Constraints
-
-Rand, Joseph, et al. Queued Up: 2025 Edition—Characteristics of Power Plants Seeking Transmission Interconnection As of the End of 2024. Lawrence Berkeley National Laboratory, Dec. 2025, https://emp.lbl.gov/queues.
-
-Lawrence Berkeley National Laboratory. “Interconnection Queue Data and Reports.” Lawrence Berkeley National Laboratory, 2025.
-
-PJM Interconnection. “Interconnection Process Reform and Queue Statistics.” PJM Interconnection, 2025.
-
-California Independent System Operator. “Interconnection Queue Management and Transmission Planning Reports.” CAISO, 2025.
-
-Midcontinent Independent System Operator. “Generator Interconnection Queue Reports.” MISO, 2025.
-
-Electric Reliability Council of Texas. “Generation Interconnection Status Reports.” ERCOT, 2025.
+Additional details and citations are provided within the notebooks and paper materials.
 
 ---
 
-## 2. Behind-the-Meter Economics Framework
+# Future Research
 
-### Electricity Prices
+Potential future extensions include:
 
-United States Energy Information Administration. “U.S. States.” U.S. Energy Information Administration, https://www.eia.gov/state/.
-
-### Natural Gas Prices
-
-United States Energy Information Administration. “U.S. States.” U.S. Energy Information Administration, https://www.eia.gov/state/.
-
-### Solar Resource Estimates
-
-National Renewable Energy Laboratory. “PVWatts Calculator.” National Renewable Energy Laboratory, https://pvwatts.nrel.gov/pvwatts.php.
-
----
-
-## 3. Literature Review and Industry Context
-
-### AI Infrastructure and Energy Demand
-
-International Energy Agency. Energy and AI. International Energy Agency, https://www.iea.org/reports/energy-and-ai.
-
-Electric Power Research Institute. “Powering Intelligence: Analyzing Artificial Intelligence and Data Center Energy Consumption.” EPRI, https://powering-intelligence.epri.com/executive-summary.html.
-
-Lawrence Berkeley National Laboratory. 2024 LBNL Data Center Energy Usage Report. Lawrence Berkeley National Laboratory, https://eta.lbl.gov/publications/2024-lbnl-data-center-energy-usage-report.
-
-United States Department of Energy. “Clean Energy Resources to Meet Data Center Electricity Demand.” U.S. Department of Energy, https://www.energy.gov/oe/clean-energy-resources-meet-data-center-electricity-demand.
-
-Uptime Institute. “Power Usage Effectiveness (PUE).” Uptime Institute, https://uptimeinstitute.com/pue.
-
----
-
-## 4. Industry Strategy and Infrastructure Development
-
-Amazon Web Services. “AWS Sustainability.” Amazon Web Services, https://sustainability.aboutamazon.com/environment/the-cloud?energyType=true.
-
-Google. “Data Center Sustainability.” Google Data Centers, https://www.google.com/about/datacenters/sustainability/.
-
-Meta. “Data Center Sustainability.” Meta Sustainability, https://sustainability.atmeta.com/data-centers/.
-
-Microsoft. “Microsoft Sustainability.” Microsoft, https://www.microsoft.com/en-us/sustainability.
-
-NVIDIA. “NVIDIA H100 Tensor Core GPU.” NVIDIA, https://www.nvidia.com/en-us/data-center/h100/.
-
-NVIDIA. “NVIDIA Blackwell Architecture.” NVIDIA, https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/.
+- State-level interconnection queue duration modeling
+- Dispatch optimization for hybrid power systems
+- Nuclear and geothermal deployment scenarios
+- Capacity expansion modeling
+- Reliability metrics
+- Power market simulations
+- Interactive Power BI deployment decision dashboard

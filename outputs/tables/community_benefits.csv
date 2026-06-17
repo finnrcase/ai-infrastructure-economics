@@ -1,0 +1,4 @@
+scenario,construction_jobs,permanent_jobs,indirect_jobs,total_jobs_supported,annual_tax_revenue_usd
+Low,1500,50,300,350,10000000
+Baseline,3000,125,875,1000,30000000
+High,5000,200,1600,1800,50000000

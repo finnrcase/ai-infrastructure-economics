@@ -1,0 +1,7 @@
+impact_type,low,baseline,high,unit,notes
+Construction_Jobs,1500,3000,5000,jobs,Temporary construction employment
+Permanent_Jobs,50,125,200,jobs,Ongoing direct operations employment
+Indirect_Jobs_Per_Direct,6,7,8,multiplier,Indirect and induced employment supported per direct operations job
+Annual_Local_Tax_Revenue,10000000,30000000,50000000,USD,Annual local tax revenue estimate
+Electricity_Price_Impact,10,15,20,percent,Typical residential electricity bill increase
+Worst_Case_Electricity_Impact,20,45,70,percent,Highly constrained grid scenario
