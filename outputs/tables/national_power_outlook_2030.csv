@@ -1,0 +1,4 @@
+scenario,demand_growth_percent,capacity_realization_percent,current_demand_mwh,projected_2030_demand_mwh,demand_growth_mwh,current_capacity_mw,realized_capacity_additions_mw,projected_2030_capacity_mw,capacity_growth_mw
+Low,10,90,3975381832,4372920015.200001,397538183.20000076,1230416,228600.0,1459016.0,228600.0
+Baseline,20,75,3975381832,4770458198.4,795076366.3999996,1230416,190500.0,1420916.0,190500.0
+High,35,60,3975381832,5366765473.200001,1391383641.2000008,1230416,152400.0,1382816.0,152400.0
