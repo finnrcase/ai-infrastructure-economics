@@ -1,4 +1,4 @@
-scenario,demand_growth_percent,capacity_realization_percent,current_demand_mwh,projected_2030_demand_mwh,demand_growth_mwh,current_capacity_mw,realized_capacity_additions_mw,projected_2030_capacity_mw,capacity_growth_mw
-Low,10,90,3975381832,4372920015.200001,397538183.20000076,1230416,228600.0,1459016.0,228600.0
-Baseline,20,75,3975381832,4770458198.4,795076366.3999996,1230416,190500.0,1420916.0,190500.0
-High,35,60,3975381832,5366765473.200001,1391383641.2000008,1230416,152400.0,1382816.0,152400.0
+scenario,aeo_scenario_code,demand_growth_percent,capacity_realization_percent,current_demand_mwh,aeo_2025_total_electricity_use_mwh,projected_2030_demand_mwh,demand_growth_mwh,current_capacity_mw,planned_capacity_additions_mw,realized_capacity_additions_mw,projected_2030_capacity_mw,capacity_growth_mw,aeo_demand_series_id,aeo_capacity_additions_series_id,source_dataset,source_file
+Low,LM2026,12.186108416063224,100.0,3975381832,4296988281.0,4459826172.0,484444340.0,1230416,137567.551,137567.551,1367983.551,137567.551,AEO.2026.LM2026.CNSM_NA_ELEP_NA_TEL_NA_USA_BLNKWH.A,AEO.2026.LM2026.CAP_NA_ELEP_CPA_NA_NA_NA_GW.A,EIA Annual Energy Outlook 2026,data/raw/AEO2026.zip
+Baseline,CB2026,14.756481107749853,100.0,3975381832,4298273438.0,4562008301.0,586626469.0,1230416,137567.551,137567.551,1367983.551,137567.551,AEO.2026.CB2026.CNSM_NA_ELEP_NA_TEL_NA_USA_BLNKWH.A,AEO.2026.CB2026.CAP_NA_ELEP_CPA_NA_NA_NA_GW.A,EIA Annual Energy Outlook 2026,data/raw/AEO2026.zip
+High,HIGHELDMD,15.032164613464483,100.0,3975381832,4298276855.0,4572967773.0,597585941.0,1230416,137567.551,137567.551,1367983.551,137567.551,AEO.2026.HIGHELDMD.CNSM_NA_ELEP_NA_TEL_NA_USA_BLNKWH.A,AEO.2026.HIGHELDMD.CAP_NA_ELEP_CPA_NA_NA_NA_GW.A,EIA Annual Energy Outlook 2026,data/raw/AEO2026.zip
