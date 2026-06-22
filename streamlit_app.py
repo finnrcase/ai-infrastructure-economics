@@ -68,6 +68,29 @@ ARCHITECTURE_DIVERSIFICATION_SCORE = {
     "Hybrid": 0.90,
 }
 
+DARK_BG = "#0B1117"
+CARD_BG = "#111827"
+SIDEBAR_BG = "#0F172A"
+BORDER = "#233044"
+TEXT = "#F9FAFB"
+MUTED_TEXT = "#CBD5E1"
+SUBTLE_TEXT = "#94A3B8"
+ACCENT_BLUE = "#38BDF8"
+SECONDARY_BLUE = "#60A5FA"
+MUTED_COLORWAY = [
+    "#38BDF8",
+    "#60A5FA",
+    "#818CF8",
+    "#2DD4BF",
+    "#A78BFA",
+    "#94A3B8",
+]
+CONTINUOUS_SCALE = [
+    [0.0, "#1E293B"],
+    [0.45, "#2563EB"],
+    [1.0, "#38BDF8"],
+]
+
 
 st.set_page_config(
     page_title="AI Infrastructure Site Selection Dashboard",
@@ -77,24 +100,145 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+    :root {
+        --dashboard-bg: #0B1117;
+        --dashboard-card: #111827;
+        --dashboard-sidebar: #0F172A;
+        --dashboard-border: #233044;
+        --dashboard-text: #F9FAFB;
+        --dashboard-muted: #CBD5E1;
+        --dashboard-subtle: #94A3B8;
+        --dashboard-accent: #38BDF8;
+        --dashboard-accent-2: #60A5FA;
+    }
+    .stApp {
+        background: var(--dashboard-bg);
+        color: var(--dashboard-text);
+    }
     .block-container {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-        max-width: 1220px;
+        padding-top: 3.25rem;
+        padding-bottom: 3.5rem;
+        max-width: 1240px;
+    }
+    h1, h2, h3, h4,
+    [data-testid="stMarkdownContainer"] h1,
+    [data-testid="stMarkdownContainer"] h2,
+    [data-testid="stMarkdownContainer"] h3 {
+        color: var(--dashboard-text);
+        letter-spacing: 0;
+    }
+    p, li, label, span,
+    [data-testid="stMarkdownContainer"],
+    [data-testid="stCaptionContainer"],
+    [data-testid="stText"] {
+        color: var(--dashboard-muted);
+    }
+    code {
+        color: #BAE6FD;
+        background: rgba(56, 189, 248, 0.10);
+        border: 1px solid rgba(56, 189, 248, 0.18);
+        border-radius: 4px;
+        padding: 0.05rem 0.25rem;
     }
     [data-testid="stMetric"] {
-        border-bottom: 1px solid rgba(49, 51, 63, 0.12);
-        padding-bottom: 0.55rem;
+        background: rgba(17, 24, 39, 0.72);
+        border: 1px solid var(--dashboard-border);
+        border-radius: 8px;
+        padding: 0.85rem 1rem 0.75rem 1rem;
+    }
+    [data-testid="stMetric"] label,
+    [data-testid="stMetric"] [data-testid="stMetricLabel"] {
+        color: var(--dashboard-muted) !important;
+    }
+    [data-testid="stMetric"] [data-testid="stMetricValue"] {
+        color: var(--dashboard-text) !important;
+    }
+    hr {
+        border-color: var(--dashboard-border);
     }
     [data-testid="stSidebar"] {
-        background-color: #f3f5f8;
+        background: var(--dashboard-sidebar);
+        border-right: 1px solid var(--dashboard-border);
+    }
+    [data-testid="stSidebar"] * {
+        color: var(--dashboard-muted) !important;
+    }
+    [data-testid="stSidebar"] h1,
+    [data-testid="stSidebar"] h2,
+    [data-testid="stSidebar"] h3,
+    [data-testid="stSidebar"] label,
+    [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] strong {
+        color: var(--dashboard-text) !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stCaptionContainer"],
+    [data-testid="stSidebar"] small {
+        color: var(--dashboard-subtle) !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stAlert"] {
+        background: rgba(56, 189, 248, 0.10);
+        border: 1px solid rgba(56, 189, 248, 0.28);
+        border-radius: 8px;
+    }
+    [data-testid="stSidebar"] input,
+    [data-testid="stSidebar"] textarea,
+    [data-testid="stSidebar"] [data-baseweb="select"] > div,
+    [data-testid="stSidebar"] [data-baseweb="input"] > div {
+        background-color: #111827 !important;
+        border-color: #334155 !important;
+        color: var(--dashboard-text) !important;
+    }
+    [data-testid="stSidebar"] [data-baseweb="select"] svg,
+    [data-testid="stSidebar"] [data-testid="stNumberInput"] button svg {
+        color: var(--dashboard-muted) !important;
+        fill: var(--dashboard-muted) !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stSlider"] [role="slider"] {
+        background-color: var(--dashboard-accent) !important;
+        border-color: var(--dashboard-accent) !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stSlider"] [data-baseweb="slider"] div[style*="height: 0.25rem"] {
+        background: #334155 !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stSliderThumbValue"] p {
+        color: var(--dashboard-accent) !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stSlider"] [data-testid="stTickBar"] {
+        color: var(--dashboard-muted) !important;
     }
     [data-testid="stDataFrame"] {
-        border: 1px solid rgba(49, 51, 63, 0.10);
+        border: 1px solid var(--dashboard-border);
         border-radius: 6px;
+        overflow: hidden;
     }
-    h1, h2, h3 {
-        letter-spacing: 0;
+    [data-testid="stTabs"] button {
+        color: var(--dashboard-muted) !important;
+    }
+    [data-testid="stTabs"] button[aria-selected="true"] {
+        color: var(--dashboard-text) !important;
+        border-bottom-color: var(--dashboard-accent) !important;
+    }
+    [data-testid="stAlert"] {
+        background: rgba(96, 165, 250, 0.10);
+        border: 1px solid rgba(96, 165, 250, 0.24);
+        border-radius: 8px;
+    }
+    [data-testid="stExpander"] {
+        background: rgba(17, 24, 39, 0.70);
+        border: 1px solid var(--dashboard-border);
+        border-radius: 8px;
+    }
+    [data-baseweb="popover"],
+    [data-baseweb="menu"],
+    [role="listbox"] {
+        background-color: #111827 !important;
+        color: var(--dashboard-text) !important;
+        border: 1px solid var(--dashboard-border) !important;
+    }
+    [role="option"] {
+        color: var(--dashboard-text) !important;
+    }
+    [role="option"]:hover {
+        background-color: rgba(56, 189, 248, 0.16) !important;
     }
     </style>
     """,
@@ -154,6 +298,38 @@ def require_table(df, filename: str) -> bool:
 def section_header(title: str, caption: str) -> None:
     st.subheader(title)
     st.caption(caption)
+
+
+def apply_chart_theme(fig):
+    """Apply the dashboard's dark executive chart theme."""
+    fig.update_layout(
+        template="plotly_dark",
+        paper_bgcolor=CARD_BG,
+        plot_bgcolor=CARD_BG,
+        font=dict(color=MUTED_TEXT),
+        title=dict(font=dict(color=TEXT)),
+        colorway=MUTED_COLORWAY,
+        legend=dict(
+            bgcolor="rgba(17,24,39,0)",
+            bordercolor=BORDER,
+            font=dict(color=MUTED_TEXT),
+        ),
+        xaxis=dict(
+            gridcolor="rgba(148, 163, 184, 0.18)",
+            zerolinecolor="rgba(148, 163, 184, 0.22)",
+            linecolor=BORDER,
+            tickfont=dict(color=MUTED_TEXT),
+            title=dict(font=dict(color=MUTED_TEXT)),
+        ),
+        yaxis=dict(
+            gridcolor="rgba(148, 163, 184, 0.18)",
+            zerolinecolor="rgba(148, 163, 184, 0.22)",
+            linecolor=BORDER,
+            tickfont=dict(color=MUTED_TEXT),
+            title=dict(font=dict(color=MUTED_TEXT)),
+        ),
+    )
+    return fig
 
 
 def add_region_column(df):
@@ -850,7 +1026,7 @@ if (
         locationmode="USA-states",
         color="custom_decision_score",
         scope="usa",
-        color_continuous_scale="Blues",
+        color_continuous_scale=CONTINUOUS_SCALE,
         hover_name="State",
         hover_data={
             "state_abbr": False,
@@ -868,11 +1044,17 @@ if (
         title="AI Infrastructure Site Selection Map",
     )
     fig.update_layout(
-        template="plotly_white",
         height=520,
         margin=dict(l=10, r=10, t=60, b=10),
-        geo=dict(bgcolor="rgba(0,0,0,0)", lakecolor="white"),
+        geo=dict(
+            bgcolor=CARD_BG,
+            lakecolor=DARK_BG,
+            landcolor="#0B1220",
+            subunitcolor="#334155",
+            countrycolor="#334155",
+        ),
     )
+    apply_chart_theme(fig)
     st.plotly_chart(fig, width="stretch")
 
     st.subheader("Top State Ranking")
@@ -921,14 +1103,14 @@ if architecture_view is not None and not architecture_view.empty:
             y="Cost ($/MWh)",
             color="Architecture",
             barmode="group",
-            color_discrete_sequence=px.colors.qualitative.Set2,
+            color_discrete_sequence=MUTED_COLORWAY,
             title="Grid, Gas, Solar, and Hybrid Cost by State",
         )
         fig.update_layout(
-            template="plotly_white",
             height=470,
             margin=dict(l=20, r=20, t=60, b=20),
         )
+        apply_chart_theme(fig)
         st.plotly_chart(fig, width="stretch")
     else:
         st.info(
@@ -985,14 +1167,14 @@ if community_tradeoff is not None:
             y="USD",
             color="Metric",
             barmode="group",
-            color_discrete_sequence=px.colors.qualitative.Pastel,
+            color_discrete_sequence=MUTED_COLORWAY,
             title="Community Benefits, Costs, and Mitigation Requirements",
         )
         fig.update_layout(
-            template="plotly_white",
             height=470,
             margin=dict(l=20, r=20, t=60, b=20),
         )
+        apply_chart_theme(fig)
         st.plotly_chart(fig, width="stretch")
     else:
         st.info("Community benefit and mitigation columns are unavailable.")
@@ -1054,6 +1236,7 @@ with tabs[0]:
                 },
             )
             fig.update_layout(height=520, margin=dict(l=20, r=20, t=60, b=20))
+            apply_chart_theme(fig)
             st.plotly_chart(fig, width="stretch")
 
         score_cols = [
@@ -1248,6 +1431,7 @@ with tabs[1]:
                 },
             )
             fig.update_layout(height=440, margin=dict(l=20, r=20, t=60, b=20))
+            apply_chart_theme(fig)
             st.plotly_chart(fig, width="stretch")
 
             plan_cols = [
@@ -1288,6 +1472,7 @@ with tabs[1]:
                 title="Power Cost Architecture Comparison",
             )
             fig.update_layout(height=520, margin=dict(l=20, r=20, t=60, b=20))
+            apply_chart_theme(fig)
             st.plotly_chart(fig, width="stretch")
 
         if (
@@ -1316,6 +1501,7 @@ with tabs[1]:
                     height=360,
                     margin=dict(l=20, r=20, t=60, b=20),
                 )
+                apply_chart_theme(fig)
                 st.plotly_chart(fig, width="stretch")
 
         display_cols = [
@@ -1376,6 +1562,7 @@ with tabs[2]:
                     },
                 )
                 fig.update_layout(height=480, margin=dict(l=20, r=20, t=60, b=20))
+                apply_chart_theme(fig)
                 st.plotly_chart(fig, width="stretch")
 
     with col_right:
@@ -1410,6 +1597,7 @@ with tabs[2]:
                     },
                 )
                 fig.update_layout(height=360, margin=dict(l=20, r=20, t=60, b=20))
+                apply_chart_theme(fig)
                 st.plotly_chart(fig, width="stretch")
 
             st.dataframe(
@@ -1446,6 +1634,7 @@ with tabs[3]:
                     y=power_outlook["projected_2030_demand_mwh"],
                     name="Projected 2030 Demand (MWh)",
                     yaxis="y",
+                    marker_color=ACCENT_BLUE,
                 )
             )
             fig.add_trace(
@@ -1455,6 +1644,8 @@ with tabs[3]:
                     name="Projected 2030 Capacity (MW)",
                     yaxis="y2",
                     mode="lines+markers",
+                    line=dict(color=SECONDARY_BLUE, width=3),
+                    marker=dict(color=SECONDARY_BLUE, size=8),
                 )
             )
             fig.update_layout(
@@ -1468,6 +1659,7 @@ with tabs[3]:
                 height=500,
                 margin=dict(l=20, r=20, t=60, b=20),
             )
+            apply_chart_theme(fig)
             st.plotly_chart(fig, width="stretch")
 
         if outlook_scenario is not None:
@@ -1536,6 +1728,7 @@ with tabs[3]:
                     margin=dict(l=20, r=20, t=60, b=80),
                     xaxis_tickangle=-35,
                 )
+                apply_chart_theme(fig)
                 st.plotly_chart(fig, width="stretch")
 
 
@@ -1629,6 +1822,7 @@ with tabs[4]:
                 title="Community Fiscal Tradeoff by Scenario",
             )
             fig.update_layout(height=500, margin=dict(l=20, r=20, t=60, b=20))
+            apply_chart_theme(fig)
             st.plotly_chart(fig, width="stretch")
 
         if community_scenario is not None:
